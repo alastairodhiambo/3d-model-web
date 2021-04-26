@@ -8,6 +8,7 @@ import Login from "./Login/Login";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import UpdateProfile from "./UpdateProfile/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
+import Data from "./Data";
 
 function App() {
   return (
@@ -15,25 +16,16 @@ function App() {
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100">
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/">
-                <Dashboard />
-              </PrivateRoute>
-              <PrivateRoute path="/update-profile">
-                <UpdateProfile />
-              </PrivateRoute>
-              <Route path="/signup">
-                <Signup />
-              </Route>
-              <Route path="/login">
-                <Login />
-              </Route>
-              <Route path="/forgot-password">
-                <ForgotPassword />
-              </Route>
+              <PrivateRoute exact path="/" component={Dashboard} />
+              <PrivateRoute path="/update-profile" component={UpdateProfile} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/data" component={Data} />
             </Switch>
           </AuthProvider>
         </Router>
