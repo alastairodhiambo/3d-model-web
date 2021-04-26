@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Others
+firebase-debug.log*
+.firebase/
+*firebase*
+
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
