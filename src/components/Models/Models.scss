@@ -1,0 +1,47 @@
+@import "../../variables";
+
+:not(:defined) > * {
+  display: none;
+}
+
+body {
+  display: flex !important;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+.model {
+  margin: 10px;
+}
+
+img {
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+model-viewer {
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 20px;
+}
