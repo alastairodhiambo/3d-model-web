@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -6,31 +5,34 @@ import Signup from "./Signup/Signup";
 import Dashboard from "./Dashboard/Dashboard";
 import Login from "./Login/Login";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
-import UpdateProfile from "./UpdateProfile/UpdateProfile";
+import UpdateProfile from "./Dashboard/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
-import Data from "./Data";
+import Homepage from "./Homepage/Homepage";
+import Models from "./Models/Models";
+import Model from "./Model/Model";
+
+import "./App.scss";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100">
-        <Router>
-          <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/forgot-password" component={ForgotPassword} />
-              <Route path="/data" component={Data} />
-            </Switch>
-          </AuthProvider>
-        </Router>
-      </div>
-    </Container>
+    <>
+      <header></header>
+      <Router>
+        <AuthProvider>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute path="/update-profile" component={UpdateProfile} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgot-password" component={ForgotPassword} />
+            <Route path="/models" component={Models} />
+            <Route path="/model/:id" component={Model} />
+          </Switch>
+        </AuthProvider>
+      </Router>
+      <footer></footer>
+    </>
   );
 }
 
