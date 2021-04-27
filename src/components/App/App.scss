@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Shade&family=Major+Mono+Display&family=Monoton&family=Quantico&display=swap");
+@import "../variables";
+
+body {
+  background: $theme !important;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  position: relative;
+  padding-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
+
+.main-content {
+  position: relative;
+  display: grid;
+  justify-content: center !important;
+  max-width: $max-width !important;
+  margin-left: auto;
+  margin-right: auto;
+}
