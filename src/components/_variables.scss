@@ -10,11 +10,11 @@ $logo-font: "Major Mono Display", monospace;
 $title-font: "Quantico", sans-serif;
 
 @mixin linkStyling {
-  background: $deep-space-sparkle;
-  color: $theme;
+  background: $theme;
+  color: $theme-font;
 
   &:hover {
-    background: $theme-font;
+    background: $deep-space-sparkle;
     text-decoration: none !important;
     color: $theme;
   }

@@ -16,7 +16,7 @@ export default function Header() {
       </div>
       <div className="models-link">
         <Link to="/models">
-          <h2>Models</h2>
+          <h2>3D Models</h2>
         </Link>
       </div>
       <UserOptions currentUser={currentUser?.email} />

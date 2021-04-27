@@ -42,7 +42,7 @@ export default function Signup() {
           className="w-100"
           style={{
             minWidth: "400px",
-            boxShadow: "0px 2px 2px 2px #aa78a6",
+            boxShadow: "0px 2px 2px 2px #62f99c",
             borderRadius: "20px",
           }}
         >
