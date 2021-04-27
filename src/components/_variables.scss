@@ -1,0 +1,29 @@
+$light: #f2f4f3;
+$dark: #151515;
+$deep-space-sparkle: #aa78a6;
+$grullo: #a9927d;
+$mobile: 600px;
+$max-width: 1400px;
+$theme: $dark;
+$theme-font: $light;
+$logo-font: "Major Mono Display", monospace;
+$title-font: "Quantico", sans-serif;
+
+@mixin linkStyling {
+  background: $deep-space-sparkle;
+  color: $theme-font;
+
+  &:hover {
+    background: $theme-font;
+    text-decoration: none !important;
+    color: $theme;
+  }
+}
+
+@mixin imageMedium {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  max-width: 400px;
+}
