@@ -10,8 +10,13 @@ export default function Header() {
   return (
     <header>
       <div className="title">
-        <Link to="/models">
+        <Link to="/">
           <h1>ModBAse</h1>
+        </Link>
+      </div>
+      <div className="models-link">
+        <Link to="/models">
+          <h2>Models</h2>
         </Link>
       </div>
       <UserOptions currentUser={currentUser?.email} />

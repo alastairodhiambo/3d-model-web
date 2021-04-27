@@ -22,7 +22,7 @@ function App() {
       <Router>
         <AuthProvider>
           <Header />
-          <div className="main-content">
+          <div id="main-content">
             <Switch>
               <Route exact path="/" component={Homepage} />
               <PrivateRoute path="/dashboard" component={Dashboard} />

@@ -40,7 +40,7 @@ export default class UserOptions extends Component {
     return (
       <div id="user-options">
         <a href="/login">
-          <span>Log In</span>
+          <span>Log In </span>
           <i className="fas fa-user-circle"></i>
         </a>
         <span>or</span>
