@@ -1,0 +1,67 @@
+@import "../variables";
+
+footer {
+  margin-top: 20px;
+  height: 150px;
+  width: 100vw;
+  background: $theme;
+  color: $theme-font;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between !important;
+}
+
+#footer-content {
+  flex: 3;
+  text-align: center;
+  padding-top: 40px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+    li {
+      padding: 5px;
+      text-decoration: underline;
+
+      a {
+        color: $theme-font;
+
+        &:hover {
+          text-decoration: none !important;
+          color: $deep-space-sparkle;
+        }
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+
+    a {
+      color: $theme-font;
+
+      &:hover {
+        text-decoration: none !important;
+        color: $deep-space-sparkle;
+      }
+    }
+  }
+
+  .sm-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+}
+
+#copyright {
+  min-width: 300px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
