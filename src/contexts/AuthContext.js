@@ -12,12 +12,10 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   function signup(email, password) {
-    // Change this to your server if you need to
     return auth.createUserWithEmailAndPassword(email, password);
   }
 
   function login(email, password) {
-    // Change this to your server if you need to
     return auth.signInWithEmailAndPassword(email, password);
   }
 
