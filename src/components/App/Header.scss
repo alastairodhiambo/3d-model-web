@@ -1,0 +1,50 @@
+@import "../variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  height: 80px;
+  width: 100%;
+  padding-top: 20px;
+  max-width: $max-width;
+  background: $theme;
+
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between !important;
+
+  .title {
+    width: 200px;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+
+    h1 {
+      font-family: $logo-font;
+      font-size: 30px;
+      color: $theme-font;
+    }
+  }
+
+  #user-options {
+    align-self: end !important;
+    color: $light;
+    padding: 10px;
+
+    a {
+      @include linkStyling;
+      border-radius: 20px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+
+  #theme-button {
+    justify-self: end;
+    color: $light;
+  }
+}
