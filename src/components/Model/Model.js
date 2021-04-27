@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouteMatch } from "react-router-dom";
-import UploadModel from "./UploadModel";
+import EditModel from "./EditModel";
 import { db } from "../../firebase";
 import "@google/model-viewer";
 
@@ -35,7 +35,7 @@ export default function Model() {
             ></model-viewer>
           </div> */}
       </div>
-      <UploadModel currentModel={model} />
+      <EditModel currentModel={model} />
     </section>
   );
 }

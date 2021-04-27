@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { db, storage } from "../../firebase";
 
 export default function UploadModel({ currentModel }) {
   const [file, setFile] = useState(null);
   const [modelName, setModelName] = useState("");
-  console.log(currentModel);
+  let history = useHistory();
 
   /****  Updating the model name  ****/
   const onModelNameChange = (e) => {
@@ -39,6 +40,13 @@ export default function UploadModel({ currentModel }) {
   };
   /***********/
 
+  /****  Delete the model  ****/
+  const onDelete = () => {
+    db.collection("models").doc(currentModel).delete();
+    history.push("/models");
+  };
+  /***********/
+
   return (
     <div className="edit-model-info">
       <div>
@@ -48,6 +56,9 @@ export default function UploadModel({ currentModel }) {
       <div>
         <input type="file" onChange={onFileChange} />
         <button onClick={onUpload}>Upload image</button>
+      </div>
+      <div>
+        <button onClick={onDelete}>Delete Model</button>
       </div>
     </div>
   );
