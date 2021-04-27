@@ -7,6 +7,7 @@ import "./Models.scss";
 
 export default function Models() {
   const [models, setModels] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unmount = db.collection("models").onSnapshot((snapshot) => {
@@ -15,9 +16,18 @@ export default function Models() {
         tempModels.push({ ...doc.data(), id: doc.id });
       });
       setModels(tempModels);
+      setLoading(false);
     });
     return unmount;
   }, []);
+
+  if (loading === true) {
+    return (
+      <>
+        <p>Loading...</p>
+      </>
+    );
+  }
 
   return (
     <div className="main">
