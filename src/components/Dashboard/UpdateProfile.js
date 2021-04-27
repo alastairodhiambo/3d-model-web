@@ -79,9 +79,9 @@ export default function Signup() {
                 placeholder="Leave blank to keep the same"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} className="w-100" type="submit">
               Update
-            </Button>
+            </button>
           </Form>
         </Card.Body>
       </Card>
