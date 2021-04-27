@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "@google/model-viewer";
 import { db } from "../../firebase";
 
+import Loader from "../Loader";
+
 import "./Models.scss";
 
 export default function Models() {
@@ -24,7 +26,7 @@ export default function Models() {
   if (loading === true) {
     return (
       <>
-        <p>Loading...</p>
+        <Loader />
       </>
     );
   }
@@ -35,13 +37,6 @@ export default function Models() {
         {models.map((model, index) => (
           <div className="model" key={index}>
             <Link to={`/model/${model.id}`}>
-              {/* <div className="model">
-                <model-viewer
-                  src={model.image}
-                  camera-controls
-                  shadow-intensity="1"
-                ></model-viewer>
-              </div> */}
               <img src={model.image} alt={model.name}></img>
               <h3>{model.name}</h3>
             </Link>
