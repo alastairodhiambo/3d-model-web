@@ -33,6 +33,18 @@ main {
   margin: 10px;
 }
 
+h3 {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none !important;
+
+  h3 {
+    color: rgb(93, 92, 92) !important;
+  }
+}
+
 img {
   border-radius: 20px;
   width: 400px;
@@ -44,4 +56,26 @@ model-viewer {
   height: 400px;
   background: white;
   border-radius: 20px;
+}
+
+.new-model {
+  width: 400px;
+  height: 75px;
+  text-align: center;
+  background: grey;
+  border-radius: 20px;
+
+  font-size: 40px;
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: black;
+    text-decoration: none !important;
+  }
+}
+
+.new-model:hover {
+  background: rgb(154, 153, 153);
 }
