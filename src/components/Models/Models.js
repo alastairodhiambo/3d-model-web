@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "@google/model-viewer";
 import { db } from "../../firebase";
+import { useAuth } from "../../contexts/AuthContext";
 
 import Loader from "../Loader";
 
@@ -10,6 +11,7 @@ import "./Models.scss";
 export default function Models() {
   const [models, setModels] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     const unmount = db.collection("models").onSnapshot((snapshot) => {
@@ -31,6 +33,18 @@ export default function Models() {
     );
   }
 
+  const CreateModel = () => {
+    if (currentUser) {
+      return (
+        <div className="new-model">
+          <Link to={`/new-model`}>New Model</Link>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
+
   return (
     <div className="main">
       <section className="content">
@@ -43,9 +57,7 @@ export default function Models() {
           </div>
         ))}
 
-        <div className="new-model">
-          <Link to={`/new-model`}>New Model</Link>
-        </div>
+        <CreateModel />
       </section>
     </div>
   );
