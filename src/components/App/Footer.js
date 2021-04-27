@@ -32,7 +32,7 @@ export default function Footer() {
             <i className="fab fa-tiktok sm-icon"></i>
           </a>
         </div>
-        <div id="copyright">&copy; 2021 ModBase</div>
+        <div id="copyright">&copy; 2021 Alastair Odhiambo</div>
       </div>
     </footer>
   );
