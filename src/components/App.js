@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import Homepage from "./Homepage/Homepage";
 import Models from "./Models/Models";
 import Model from "./Model/Model";
+import NewModel from "./NewModel/NewModel";
 
 import "./App.scss";
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/forgot-password" component={ForgotPassword} />
             <Route path="/models" component={Models} />
             <Route path="/model/:id" component={Model} />
+            <Route path="/new-model" component={NewModel} />
           </Switch>
         </AuthProvider>
       </Router>

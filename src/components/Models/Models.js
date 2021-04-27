@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "@google/model-viewer";
 import { db } from "../../firebase";
 
-import NewModelForm from "../NewModel/NewModelForm"; // Temporary
-
 import "./Models.scss";
 
 export default function Models() {
@@ -39,18 +37,11 @@ export default function Models() {
             </Link>
           </div>
         ))}
-        <NewModelForm />
+
+        <div className="new-model">
+          <Link to={`/new-model`}>New Model</Link>
+        </div>
       </section>
     </div>
   );
 }
-
-/* 
-<div className="model">
-        <model-viewer
-          src="./DamagedHelmet.glb"
-          camera-controls
-          shadow-intensity="1"
-        ></model-viewer>
-      </div>
-*/
