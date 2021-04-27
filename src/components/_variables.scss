@@ -1,6 +1,6 @@
 $light: #f2f4f3;
 $dark: #151515;
-$deep-space-sparkle: #aa78a6;
+$deep-space-sparkle: #62f99c;
 $grullo: #a9927d;
 $mobile: 600px;
 $max-width: 1400px;
@@ -11,7 +11,7 @@ $title-font: "Quantico", sans-serif;
 
 @mixin linkStyling {
   background: $deep-space-sparkle;
-  color: $theme-font;
+  color: $theme;
 
   &:hover {
     background: $theme-font;
@@ -21,7 +21,7 @@ $title-font: "Quantico", sans-serif;
 }
 
 @mixin imageMedium {
-  border-radius: 20px;
+  border-radius: 10px;
   object-fit: cover;
   width: 100%;
   height: 400px;

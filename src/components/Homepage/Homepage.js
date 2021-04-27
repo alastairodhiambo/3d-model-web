@@ -4,14 +4,13 @@ import "./Homepage.scss";
 
 export default class Homepage extends Component {
   componentDidMount() {
-    /********* My Code **********/
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x151515);
     /**
      * Sizes
      */
     let width = window.innerWidth - 40;
-    if (window.innerWidth > 1400) {
+    if (window.innerWidth > 1380) {
       width = 1380;
     }
     const sizes = {
@@ -40,7 +39,7 @@ export default class Homepage extends Component {
     parameters.randomness = 0.2;
     parameters.randomnessPower = 3;
     parameters.insideColor = "#c4fcf0";
-    parameters.outsideColor = "#ce9feb";
+    parameters.outsideColor = "#62F99C";
 
     let geometry = null;
     let material = null;
@@ -134,10 +133,6 @@ export default class Homepage extends Component {
     camera.position.z = 3;
     scene.add(camera);
 
-    // // Controls
-    // const controls = new OrbitControls(camera, canvas);
-    // controls.enableDamping = true;
-
     /**
      * Animate
      */
@@ -161,6 +156,3 @@ export default class Homepage extends Component {
     return <div ref={(ref) => (this.mount = ref)} />;
   }
 }
-// const rootElement = document.getElementById("root");
-// // ReactDOM.render(<App />, rootElement);
-// export default App;
