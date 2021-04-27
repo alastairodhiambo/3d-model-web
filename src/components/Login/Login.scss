@@ -1,0 +1,9 @@
+@import "../variables";
+
+button {
+  @include linkStyling;
+  padding: 10px;
+  border: none;
+  border-radius: 10px !important;
+  width: 100%;
+}
